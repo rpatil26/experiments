@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Happy Diwali 2015</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="Author" content="Rajendra Patil,rrpatil26@gmail.com">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style type="text/css">
+    body {
+        background-color: black;
+    }
+
+    .lamp {
+        position: absolute;
+        margin: 15% 33%;
+    }
+
+    .lamp:before {
+        content: " ";
+        display: block;
+        position: relative;
+        left: 150px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        background: #663300;
+        box-shadow: 0 0 15px 8px #663300;
+        z-index: 1000;
+        border-bottom-right-radius: 30%;
+        border-bottom-left-radius: 30%;
+        border-top-left-radius: 30%;
+        transform: rotate(-45deg);
+    }
+
+    .lamp:after {
+        display: block;
+        content: "";
+        border: 80px solid #663300;
+        border-width: 75px 155px;
+        border-radius: 190px;
+        box-shadow: 0 0 .1em .1em #444;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+
+    .flame:before {
+        display: block;
+        content: " ";
+        border-bottom-right-radius: 90%;
+        border-bottom-left-radius: 60%;
+        border-top-left-radius: 90%;
+        width: 80px;
+        height: 80px;
+        background: orange;
+        box-shadow: 0 0 15px 10px orange;
+        position: relative;
+        top: 15px;
+        left: 5px;
+    }
+
+    .flame:after {
+        display: block;
+        content: " ";
+        border-bottom-right-radius: 90%;
+        border-bottom-left-radius: 30%;
+        border-top-left-radius: 100%;
+        width: 60px;
+        height: 60px;
+        background: rgb(245, 240, 187);
+        box-shadow: 0 0 20px 10px rgb(251, 243, 176);
+        position: relative;
+        top: -60px;
+    }
+	/*
+     *  Flame idea inspired by Adrian Payne's pen at http://codepen.io/dazulu/pen/fGFyj
+     */
+
+    .flame {
+        position: absolute;
+        top: -110px;
+        left: 110px;
+        border-bottom-right-radius: 90%;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 90%;
+        transform: rotate(-45deg);
+        width: 100px;
+        height: 100px;
+        background: #FF4500;
+        box-shadow: 0 0 15px 9px #FF4500;
+        animation-name: flicker;
+        animation-duration: 1.5s;
+        animation-delay: .2s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes flicker {
+        0% {
+            transform: rotate(-46deg);
+            box-shadow: 0 0 20px 10px #FF4500;
+        }
+        20% {
+            transform: rotate(-44deg) scale(1.01);
+            width: 97px;
+        }
+        40% {
+            transform: rotate(-43deg) scale(1.03);
+            width: 100px;
+        }
+        60% {
+            transform: rotate(-45deg);
+        }
+        80% {
+            transform: rotate(-44deg);
+        }
+        100% {
+            transform: rotate(-45deg);
+        }
+    }
+    .greet {
+    	position: absolute;
+    	bottom: 200px;
+    	text-align: center;
+    	width: 90%;
+    	color: #fff;
+        font-family: cursive;
+        font-size: 60px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="lamp">
+        <div class="flame">&nbsp;
+        </div>
+    </div>
+    <div class="greet">
+    	Wish you Happy Diwali
+    </div>
+</body>
+
+</html>
